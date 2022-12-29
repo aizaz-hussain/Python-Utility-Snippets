@@ -22,7 +22,7 @@ logging.getLogger('LoggerInit').addHandler(console)
 
 
 
-def LogUpd(msg=''):
+def LogUpd(msg='', level=1):
     if recordLogs == True:
         srcFile = inspect.getsourcefile(sys._getframe(1))
         loggerName = srcFile.split('/')
