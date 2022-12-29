@@ -30,7 +30,7 @@ def LogUpd(msg='', level=1):
         logging.getLogger(loggerName[len(loggerName)-1]).addHandler(console)
 
         if level == 1:
-           logging.getLogger(loggerName[len(loggerName)-1]).info(msg)
+            logging.getLogger(loggerName[len(loggerName)-1]).info(msg)
         elif level == 2:
             logging.getLogger(loggerName[len(loggerName)-1]).warning(msg)
         elif level == 3:
