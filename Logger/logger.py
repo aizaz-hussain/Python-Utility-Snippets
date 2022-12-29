@@ -23,8 +23,17 @@ logging.getLogger('LoggerInit').addHandler(console)
 
 
 def LogUpd(msg='', level=1):
+
     if recordLogs == True:
         srcFile = inspect.getsourcefile(sys._getframe(1))
         loggerName = srcFile.split('/')
         logging.getLogger(loggerName[len(loggerName)-1]).addHandler(console)
-        logging.getLogger(loggerName[len(loggerName)-1]).info(msg)
+
+        if level == 1:
+           logging.getLogger(loggerName[len(loggerName)-1]).info(msg)
+        elif level == 2:
+            logging.getLogger(loggerName[len(loggerName)-1]).warning(msg)
+        elif level == 3:
+            logging.getLogger(loggerName[len(loggerName)-1]).debug(msg)
+        elif level == 4:
+            logging.getLogger(loggerName[len(loggerName)-1]).error(msg)
