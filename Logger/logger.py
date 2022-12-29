@@ -12,7 +12,7 @@ filePath = './logs/' + str(datetime.now().strftime("log_%m-%d-%Y_%H-%M-%S")) + '
 
 logging.basicConfig (   level=logging.DEBUG,
                         filename=filePath,
-                        filemode='w' )
+                        filemode='w'  )
 console = logging.StreamHandler()
 console.setLevel(logging.DEBUG)
 formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s',
